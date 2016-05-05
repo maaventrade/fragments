@@ -14,6 +14,7 @@ import android.graphics.Rect;
 import android.util.Log;
 
 public class Data {
+	//
 	private static ArrayList<Mark> mMarks = new ArrayList<Mark>();
 	private static ArrayList<StringToDisply> mStrings = new ArrayList<StringToDisply>();
 	private static ArrayList<PolyLine> polyLines = new ArrayList<PolyLine>();
@@ -27,7 +28,10 @@ public class Data {
 		void callbackCalcPolyLines(); 
 	} 
 	
-	/*******************************/
+	/*
+	*
+	*
+	*/
 	public static int getPosEnd(int j) {
 		StringToDisply s = mStrings.get(j);
 		return s.posEnd;
