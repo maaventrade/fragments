@@ -1,0 +1,122 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="alex.xolo.readrec.ActivityMain" >
+
+    <group android:id="@+id/group_record" >
+	    <item
+	        android:id="@+id/action_rec"
+	        android:orderInCategory="101"
+	        android:icon="@drawable/mic" 
+	        android:title="Start recording" 
+	      android:showAsAction="always"/>
+	    
+	    <item
+	        android:id="@+id/action_play"
+	        android:orderInCategory="102"
+	        android:icon="@drawable/playc" 
+	        android:title="Start playing" 
+	        android:showAsAction="always"/>
+	    
+	    <item
+	        android:id="@+id/action_stop"
+	        android:orderInCategory="103"
+	        android:icon="@drawable/stopc" 
+	        android:title="Stop" 
+	        android:showAsAction="always"/>
+	        
+	    <item
+	        android:id="@+id/action_pause"
+	        android:orderInCategory="104"
+	        android:icon="@drawable/pausec" 
+	        android:title="Pause" 
+	        android:showAsAction="always"/>
+    		    
+    </group>
+    
+    
+    
+    <group android:id="@+id/group_edit" >
+	    <item
+	        android:id="@+id/action_add"
+	        android:orderInCategory="100"
+	        android:icon="@drawable/add" 
+	        android:title="@string/action_add" 
+	        android:showAsAction="always"/>
+	    
+	        <item
+	        android:id="@+id/action_delete"
+	        android:orderInCategory="100"
+	        android:icon="@drawable/delete" 
+	        android:title="@string/action_delete" 
+	      	android:showAsAction="always"/>
+	        
+		<item
+	        android:id="@+id/action_link"
+	        android:orderInCategory="100"
+	        android:icon="@drawable/chain" 
+	        android:title="@string/action_link" 
+	        android:showAsAction="always"/>
+	        
+		<item
+	        android:id="@+id/action_undo"
+	        android:orderInCategory="100"
+	        android:icon="@drawable/undo" 
+	        android:title="@string/action_undo" 
+	        android:showAsAction="always"/>
+    </group>
+
+    <item
+		android:id="@+id/action_save_audio"
+        android:orderInCategory="99"
+        android:title="@string/action_save_audio"
+        android:showAsAction="never"/>    	        	        
+
+    <item
+		android:id="@+id/action_open_audio"
+        android:orderInCategory="99"
+        android:title="@string/action_open_audio"
+        android:showAsAction="never"/>    	        	        
+	
+	
+	<item
+        android:id="@+id/action_save_file"
+        android:orderInCategory="100"
+        android:icon="@drawable/save" 
+        android:title="@string/action_save_file" 
+        android:showAsAction="never"/>
+			
+    <item
+        android:id="@+id/action_open_file"
+        android:orderInCategory="100"
+        android:title="@string/action_open_file"
+        android:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_info"
+        android:orderInCategory="100"
+        android:title="Информация о программе" 
+        android:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/action_cut_fragment"
+        android:orderInCategory="100"
+        android:title="@string/action_cut_fragment"/>    
+        
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"/>
+
+    <item
+        android:id="@+id/action_clear_marks"
+        android:orderInCategory="100"
+        android:title="@string/action_clear_marks"/>
+    
+    <item
+        android:id="@+id/action_save_file_as"
+        android:orderInCategory="100"
+        android:title="@string/action_save_file_as"/>
+    
+    
+</menu>

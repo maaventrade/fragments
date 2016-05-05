@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Text Marker</string>
+    <string name="action_settings">Настройка</string>
+    <string name="action_clear_marks">Очистить разметку</string>
+    
+    <string name="action_save_audio">Сохранить аудио запись</string>
+	<string name="action_open_audio">Открыть аудио запись</string>
+    <string name="action_open_file">Открыть файл</string>
+    <string name="action_save_file">Сохранить файл</string>
+    <string name="action_save_file_as">Сохранить файл как...</string>
+    <string name="action_cut_fragment">Вырезать фрагмент файла</string>
+    <string name="action_add">Режим добавления элементов разметки</string>
+    <string name="action_delete">Удалить элемент разметки</string>
+    <string name="action_link">Добавить/удалить связь</string>
+    <string name="action_undo">Отменить последнее действие</string>
+    
+    <string name="menu_open_file">Открыть файл и добавить в медиатеку</string>
+    <string name="add_file">Добавить файл</string>
+    <string name="menu_setup">Настройка</string>
+    <string name="menu_clear_subs">Очистить разметку</string>
+    
+    <string name="error_save_ini">Не найден файл настроек</string>
+    <string name="error_load_ini">Ошибка при сохранении настроек</string>
+    <string name="error_empty_record">Пустая запись. Не сохраняем.</string>
+	<string name="error_loading">Ошибка при загрузке файла.</string>
+	
+
+    <string name="loading_cancelled">Загрузка прервана. </string>
+    <string name="error_load_zip">Ошибка при загрузке ZIP файла.</string>
+    <string name="error_load_xml">Ошибка при загрузке XML файла.</string>
+    <string name="error_saving_audio">Ошибка при записи аудио файла.</string>
+    <string name="error_saving_file">Ошибка при загрузке файла.</string>
+    <string name="error_save_file">Ошибка при сохранении файла.</string>
+        
+    
+    <string name="dialog_settings">Настройка</string>
+    
+    <string name="dialog_cut_fragment_from">Фрагмент со строки:</string>
+    <string name="dialog_cut_fragment_to">по:</string>
+    <string name="dialog_cut_fragment">Вырезать фрагмент файла.</string>
+    
+
+    <string name="dialog_cut_fragment_num">Нумерация строк</string>
+    <string name="dialog_settings_show_lines">Линии, соединяющие разметку</string>
+    <string name="dialog_settings_show_bgcolors">Выделять разметку цветом</string>
+    <string name="dialog_settings_text_size">Размер шрифта:</string>
+    
+    <string name="dialog_info">Информация</string>
+    <string name="dialog_info_file_name">Файл:</string>
+        
+	<string name="button_cancel">Отказ</string>
+    
+	<string name="ok">Ok</string>
+	<string name="cancel">Закрыть</string>
+	
+	<string name="name">Имя:</string>
+	<string name="time">Время:</string>
+	<string name="duration">Длительность:</string>
+	<string name="descr">Описание:</string>
+	<string name="index">Индекс:</string>
+	<string name="label">Метка:</string>
+	<string name="info_new_audio">Новый аудио файл</string>
+	<string name="info_set_info_audio">Обновить описание аудио файла</string>
+	
+<string name="sizePrompt">Выберите размер шрифта</string>
+<string name="settingsTextSize">Размер шрифта</string>
+<string-array name="fontSizes">
+    <item>16</item>
+    <item>17</item>
+    <item>18</item>
+    <item>19</item>
+    <item>20</item>
+    <item>21</item>
+    <item>22</item>
+    <item>23</item>
+    <item>24</item>
+    <item>25</item>
+    <item>26</item>
+    <item>27</item>
+    <item>28</item>
+    <item>29</item>
+    <item>30</item>
+    <item>31</item>
+    <item>32</item>
+    <item>33</item>
+    <item>34</item>
+    <item>35</item>
+    <item>36</item>
+    <item>37</item>
+    <item>38</item>
+    <item>39</item>
+    <item>40</item>
+</string-array>
+    
+</resources>

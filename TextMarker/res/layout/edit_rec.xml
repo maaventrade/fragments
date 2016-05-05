@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="info"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="match_parent"
+		android:textColor="#6F32B1"
+		android:id="@+id/editRecInfo1"/>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="@string/name"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:textColor="@color/teal"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="Medium Text"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:id="@+id/editRecName"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="@string/index"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:textColor="@color/teal"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="Medium Text"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:id="@+id/editRecIndex"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="@string/time"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:textColor="@color/teal"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="Medium Text"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:id="@+id/editRecTime"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="@string/duration"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:textColor="@color/teal"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="Medium Text"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:id="@+id/editRecDuration"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="@string/descr"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:textColor="@color/teal"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:layout_width="wrap_content"
+			android:id="@+id/editRecNote"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="@string/label"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:textColor="@color/teal"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:layout_width="wrap_content"
+			android:id="@+id/editRecLabel"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:orientation="horizontal">
+
+		<Button
+			android:layout_height="wrap_content"
+			android:text="@string/ok"
+			android:layout_width="fill_parent"
+			android:layout_weight="0.5"
+			android:id="@+id/editRecButtonOk"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:text="@string/cancel"
+			android:layout_width="fill_parent"
+			android:layout_weight="0.5"
+			android:id="@+id/editRecButtonCancel"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+
