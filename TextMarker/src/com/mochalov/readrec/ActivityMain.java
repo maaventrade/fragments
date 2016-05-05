@@ -21,10 +21,10 @@ import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.alex.mochalov.files.SelectFileDialog;
 import com.mochalov.data.Data;
 import com.mochalov.files.FileLoader;
 import com.mochalov.files.FileSaver;
+import com.mochalov.files.SelectFileDialog;
 import com.mochalov.readrec.ActivityMain.states.State;
 import com.mochalov.readrec.ImgView.OnEventListener;
 import com.mochalov.readrec.SeekBarV.OnCustomEventListener;

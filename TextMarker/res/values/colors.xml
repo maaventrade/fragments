@@ -16,4 +16,10 @@
  <color name="blue">#0000FF</color>
  <color name="navy">#000080</color>
  <color name="black">#000000</color>
+ 
+<color name= "bronze">#CD7F32</color>
+<color name= "bronze_light">#FBF5EF</color>
+<color name= "bronze_light2">#F0F1A0</color>
+<color name= "bronze_light1">#DCAF7F</color>
+ 
 </resources>
