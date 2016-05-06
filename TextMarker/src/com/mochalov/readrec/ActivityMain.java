@@ -2,7 +2,7 @@ package com.mochalov.readrec;
 
 import java.io.File;
 import java.util.ArrayList;
-
+ 
 import alex.xolo.readrec.R;
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -40,7 +40,7 @@ import com.mochalov.readrec.SeekBarV.OnCustomEventListener;
  */
 public class ActivityMain extends Activity {
 	Context mContext;
-
+   
 	// States of the application. They are displayed in toolbar menu
 	static class states {
 		enum State {
