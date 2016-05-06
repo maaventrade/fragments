@@ -3,7 +3,6 @@ package com.mochalov.readrec;
 import java.util.ArrayList;
 
 import com.mochalov.data.StringToDisply;
-import com.mochalov.data.Data.MarkTypes;
 import com.mochalov.data.Mark;
 
 import android.graphics.Canvas;
@@ -145,7 +144,7 @@ public class Loupe {
 			canvas.drawLine(xSelectedLetter-10, y-h*2 + dy,   xSelectedLetter+30, y-h*2 + dy , paintLoupeLine1);
 			canvas.drawLine(xSelectedLetter-10, y-h*2 + dy*3, xSelectedLetter+30, y-h*2 + dy*3 , paintLoupeLine1);
 			
-			if (mark.getType() == MarkTypes.Up)
+			if (mark.isUp())
 				canvas.drawCircle(xSelectedLetter + 10, y-h*2 + dy, RADIUS3, paintCircle);
 			else
 				canvas.drawCircle(xSelectedLetter + 10, y-h*2 + dy*3, RADIUS3, paintCircle);

@@ -10,7 +10,7 @@ import com.mochalov.data.Data;
 import com.mochalov.data.Mark;
 import com.mochalov.data.PolyLine;
 import com.mochalov.data.Undo;
-import com.mochalov.data.Data.MarkTypes;
+
 import com.mochalov.readrec.ActivityMain.states.State;
 import com.mochalov.readrec.ImgView.statesIV.States;
 //import com.mochalov.readrec.Mark.MarkComparator;
@@ -600,9 +600,9 @@ public class ImgView extends ImageView {
 		if (yc >= firstLinePixelShift + heightOfTopBorder
 				+ (firstLinePixelShiftMax) * (line - firstLine)
 				- heightOfString + 2 + (deltaLine >> 1))
-			mark.setType(MarkTypes.Dn);
+			mark.setTypeDn();
 		else
-			mark.setType(MarkTypes.Up);
+			mark.setTypeUp();
 
 		//
 		//
@@ -683,12 +683,12 @@ public class ImgView extends ImageView {
 					startLineMark.getCenterY(), mark.getCenterX(),
 					mark.getCenterY(), paintMarkLine);
 		} else {
-			if (startLineMark.getType() == MarkTypes.Up)
+			if (startLineMark.isUp())
 				dStart = -deltaLine2 + heightOfTopBorder;
 			else
 				dStart = deltaLine + heightOfTopBorder;
 
-			if (mark.getType() == MarkTypes.Up)
+			if (mark.isUp())
 				dEnd = -deltaLine2 + heightOfTopBorder;
 			else
 				dEnd = deltaLine + heightOfTopBorder;
@@ -852,9 +852,9 @@ public class ImgView extends ImageView {
 								+ (firstLinePixelShiftMax) * (i - firstLine)
 								- heightOfString + 2;
 
-						if (mark.getType() == MarkTypes.Up)
+						if (mark.isUp())
 							yc = yMiddle - deltaLine2 + heightOfTopBorder;
-						else if (mark.getType() == MarkTypes.Dn)
+						else if (mark.isDn())
 							yc = yMiddle + deltaLine + heightOfTopBorder;
 						else
 							yc = yMiddle + heightOfTopBorder;

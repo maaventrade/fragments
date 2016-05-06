@@ -16,7 +16,7 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import com.mochalov.data.Data;
-import com.mochalov.data.Data.MarkTypes;
+import com.mochalov.data.Mark.MarkTypes;
 import com.mochalov.readrec.ActivityMain;
 import com.mochalov.readrec.Vars;
 

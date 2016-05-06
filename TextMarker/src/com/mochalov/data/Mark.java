@@ -4,24 +4,46 @@ import java.util.Comparator;
 
 import android.graphics.Rect;
 
-import com.mochalov.data.Data.MarkTypes;
-
 public class Mark {
-	private int line;
-	private int mPos;
-	boolean stop;
+	private int mLine; // Numberl of the string where this mark is
+	private int mPos;// Position in the string where this mark is
+	boolean stop; // This mark is the last in the chain
 
-	int lineSrc;
+	int mLineSrc;
 	int mPosSrc;
 
 	Rect rect;
 
+	public boolean isDn()
+	{
+		return type == MarkTypes.Dn;
+		
+	}
+
+	public void setTypeUp()
+	{
+		type = MarkTypes.Up;
+	}
+
+	public void setTypeDn()
+	{
+		type = MarkTypes.Dn;
+	}
+
+	public boolean isUp()
+	{
+		return type == MarkTypes.Up;
+	}
+	
+	public enum MarkTypes {
+		Up, Dn
+		}
 	MarkTypes type;
 
 	public Mark(int line, int pos, MarkTypes type) {
 		super();
-		this.line = line;
-		this.mPos = pos;
+		mLine = line;
+		mPos = pos;
 		this.type = type;
 		this.stop = false;
 
@@ -30,12 +52,12 @@ public class Mark {
 
 	public Mark(Mark mark) {
 		super();
-		this.line = mark.line;
+		mLine = mark.mLine;
 		mPos = mark.mPos;
 		this.type = mark.type;
 		this.stop = mark.stop;
 
-		this.lineSrc = mark.lineSrc;
+		mLineSrc = mark.mLineSrc;
 		this.mPosSrc = mark.mPosSrc;
 
 		rect = new Rect();
@@ -45,11 +67,11 @@ public class Mark {
 	public Mark(int line, int pos, int lineSrc, int mPosSrc, MarkTypes type,
 			boolean stop) {
 		super();
-		this.line = line;
-		this.mPos = pos;
+		mLine = line;
+		mPos = pos;
 		this.stop = stop;
 
-		this.lineSrc = lineSrc;
+		mLineSrc = lineSrc;
 		this.mPosSrc = mPosSrc;
 
 		this.type = type;
@@ -61,7 +83,7 @@ public class Mark {
 	}
 
 	public void restoreSrc() {
-		line = lineSrc;
+		mLine = mLineSrc;
 		mPos = mPosSrc;
 	}
 
@@ -84,11 +106,11 @@ public class Mark {
 	}
 
 	public void setLine(int line) {
-		this.line = line;
+		mLine = line;
 	}
 
 	public int getLine() {
-		return line;
+		return mLine;
 	}
 
 	public int getPos() {
@@ -120,8 +142,8 @@ public class Mark {
 	}
 
 	public void setLineAndPosSrc(StringToDisply S) {
-		lineSrc = S.index;
-		mPosSrc = S.posStart + mPos + 1;
+		mLineSrc = S.mIndex;
+		mPosSrc = S.mPosStart + mPos + 1;
 	}
 
 	public int getPosSrc() {
@@ -138,9 +160,9 @@ public class Mark {
 	
 	static class MarkComparator implements Comparator<Mark> {
 		public int compare(Mark markA, Mark markB) {
-			if (markA.line < markB.line)
+			if (markA.mLine < markB.mLine)
 				return -1;
-			else if (markA.line > markB.line)
+			else if (markA.mLine > markB.mLine)
 				return 1;
 			else if (markA.mPos <= markB.mPos)
 				return -1;

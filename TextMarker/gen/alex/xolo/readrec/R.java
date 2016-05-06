@@ -122,12 +122,12 @@ public final class R {
         public static final int layout_root=0x7f0a001a;
         public static final int listRecsListView=0x7f0a000c;
         public static final int progressBar1=0x7f0a0001;
+        public static final int raw_text_view=0x7f0a000e;
         public static final int spinner1=0x7f0a001d;
         public static final int textView2=0x7f0a001b;
         public static final int textView3=0x7f0a001e;
         public static final int textViewCurrentDir=0x7f0a0014;
         public static final int textViewDuration=0x7f0a001c;
-        public static final int weekofday=0x7f0a000e;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

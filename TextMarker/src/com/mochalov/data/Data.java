@@ -9,12 +9,15 @@ import java.util.Comparator;
 import com.mochalov.data.Mark.MarkComparator;
 import com.mochalov.readrec.ActivityMain;
 import com.mochalov.readrec.DialogSelectRec.MyCallback;
+import com.mochalov.data.Mark.MarkTypes;
 
 import android.graphics.Rect;
 import android.util.Log;
 
+// Class Data provides working with arrays
+// that contains information for displaying:
+// Strings, Marks and PolyLines
 public class Data {
-	//
 	private static ArrayList<Mark> mMarks = new ArrayList<Mark>();
 	private static ArrayList<StringToDisply> mStrings = new ArrayList<StringToDisply>();
 	private static ArrayList<PolyLine> polyLines = new ArrayList<PolyLine>();
@@ -30,21 +33,24 @@ public class Data {
 	
 	/*
 	*
-	*
 	*/
 	public static int getPosEnd(int j) {
 		StringToDisply s = mStrings.get(j);
-		return s.posEnd;
+		return s.mPosEnd;
 	}
 
 	public static int getPosStart(int j) {
 		StringToDisply s = mStrings.get(j);
-		return s.posStart;
+		return s.mPosStart;
 	}
 
+	/**
+	* Metod returns the index of the initial string
+	* StringToDisply is a part of the initial string
+	*/
 	public static int getIndex(int j) {
 		StringToDisply s = mStrings.get(j);
-		return s.index;
+		return s.mIndex;
 	}
 
 	public static void addString(String string, Boolean first, int i, int prevPos,
@@ -58,19 +64,10 @@ public class Data {
 		return null;
 	}
 
-	/*******************************/
-
 	public static void restoreSrc() {
 		for (Mark m : mMarks)
 			m.restoreSrc();
 	}
-
-	// public static class MTypes{
-	public enum MarkTypes {
-		Up, Dn
-	}
-
-	// }
 
 	public static void addMark(int i, int j, int sizeMinus1, int length,
 			MarkTypes markType, boolean b) {

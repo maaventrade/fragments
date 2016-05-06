@@ -11,7 +11,7 @@ android:layout_height="wrap_content"
 android:src="@drawable/icon"/>
 
 <TextView
-    android:id="@+id/weekofday"
+    android:id="@+id/raw_text_view"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:textColor="@color/bronze_light" />

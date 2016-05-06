@@ -2,12 +2,17 @@ package com.mochalov.data;
 
 import java.util.ArrayList;
 
-import com.mochalov.data.Data.MarkTypes;
 
 import android.graphics.Color;
 import android.graphics.Point;
 import android.util.Log;
-
+/*
+* PolyLine links the Marks
+* It has a list of own marks.
+* PolyLines with diffrent sets of marks
+* have different background colors
+*
+*/
 public class PolyLine {
 	private ArrayList<Mark> marks = new ArrayList<Mark>();
 	
@@ -36,7 +41,7 @@ public class PolyLine {
 		for (int i = 0; i< polyLines.size(); i++)
 			for (int j = 0; j< polyLines.get(i).marks.size(); j++)
 				if (polyLines.get(i).marks.get(j) == mark){
-					if (mark.type == MarkTypes.Up)
+					if (mark.isUp())
 						return colorsUp[polyLines.get(i).marks.size() % 5];
 					else
 						return colorsDn[polyLines.get(i).marks.size() % 5];
@@ -64,7 +69,7 @@ public class PolyLine {
 	
 	public int getPolyLineBGColor() {
 		Mark mark = marks.get(0);
-		if (mark.getType() == MarkTypes.Up)
+		if (mark.isUp())
 			return colorsUp[marks.size() % 5];
 		else
 			return colorsDn[marks.size() % 5];

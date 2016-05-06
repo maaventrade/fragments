@@ -28,14 +28,14 @@ import android.widget.TextView;
  *    
  * @author Alexey Mochalov (maaventrade@gmail.com)
  * 
- * Activity for selection file from storage
+ * Dialog for selection file from storage
  *
  */
 public class SelectFileDialog extends Dialog {
-	private Context context;
-    private String addInfo;
+	private Context mContext;
+    //private String mAddInfo;
     
-    private String initPath; 
+    private String mInitPath; 
     private String fileExt[];
     private String message;
 
@@ -59,12 +59,12 @@ public class SelectFileDialog extends Dialog {
 			boolean editName, boolean eMail, String addInfo) {
 		
 			super(context, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
-			this.context = context;
-			this.initPath = initPath;
+			mContext = context;
+			mInitPath = initPath;
 			this.fileExt = fileExt;
 			this.message = message;
 			this.editName = editName;
-			this.addInfo = addInfo;
+			//this.addInfo = addInfo;
 			
 			mEMail = eMail;
 			mFileName = fileName;
@@ -72,10 +72,6 @@ public class SelectFileDialog extends Dialog {
 			dialog = this;
 		}
 
-	//private void setCallBack(interface MyCallback1){
-	//	
-	//}
-	
 	
 	ListView list_files; // 
 
@@ -99,7 +95,7 @@ public class SelectFileDialog extends Dialog {
 	
 	private class MyArrayAdapter<String> extends ArrayAdapter{      
 		MyArrayAdapter() {      
-			super(context, R.layout.raw,R.id.weekofday,listItems);  
+			super(mContext, R.layout.raw, R.id.raw_text_view,listItems);  
 		}    
 		public View getView(int position, View convertView, ViewGroup parent) {      
 			View row = super.getView(position, convertView, parent);      
@@ -156,7 +152,7 @@ public class SelectFileDialog extends Dialog {
     
         list_files = (ListView)findViewById(R.id.FileList);
         textViewCurrentDir = (TextView)findViewById(R.id.textViewCurrentDir);
-        textViewCurrentDir.setText(initPath);
+        textViewCurrentDir.setText(mInitPath);
         
         if (!editName){
         	LinearLayout linearLayoutNew = (LinearLayout)findViewById(R.id.LinearLayoutNew);
@@ -166,8 +162,8 @@ public class SelectFileDialog extends Dialog {
         	editTextName.setText(mFileName);
         }
         
-		File file = new File(initPath);                                    
-		if (file.exists()) readDir(initPath);
+		File file = new File(mInitPath);                                    
+		if (file.exists()) readDir(mInitPath);
 		else readDir("/");
         
         list_files.setOnItemClickListener(new OnItemClickListener() { 
@@ -218,30 +214,10 @@ public class SelectFileDialog extends Dialog {
         } else {
         	btnMail.setVisibility(View.INVISIBLE);
         }
-        
-        /*
-        if (message != null
-        && message.length() > 0){
-        	AlertDialog.Builder builder = new AlertDialog.Builder(context);
-            builder
-            .setTitle(message)
-            .setPositiveButton("Ok", new DialogInterface.OnClickListener() 
-            {
-                public void onClick(DialogInterface dialog, int which) 
-                {       
-                    dialog.dismiss();           
-            }
-            });             
-        AlertDialog alert = builder.create();
-                alert.show();        
-        }
-        */
 	}
 
     public String getEditText(){
     	EditText editTextName = (EditText)findViewById(R.id.editTextName); 
     	return dir.toString()+"/"+editTextName.getText().toString();
     }
-    
-    
 }

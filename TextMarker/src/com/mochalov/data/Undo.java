@@ -1,10 +1,14 @@
 package com.mochalov.data;
 
 
-import com.mochalov.data.Data.MarkTypes;
+import com.mochalov.data.Mark.MarkTypes;
 
 import android.graphics.Rect;
 
+/**
+* This class provided undo for a manipulations with marks
+*
+*/
 public class Undo {
 	Mark mark;
 	Mark markOld;
@@ -42,7 +46,7 @@ public class Undo {
 		mark.setLine(markOld.getLine());
 		mark.setPos(markOld.getPos());
 		mark.stop = markOld.stop;
-		mark.lineSrc = markOld.lineSrc;
+		mark.mLineSrc = markOld.mLineSrc;
 		
 		mark.setPosSrc(markOld.getPosSrc());
 		

@@ -1,28 +1,31 @@
 package com.mochalov.data;
 
+/*
+* StringToDisply is string prepared to display
+*
+*/
 public class StringToDisply {
-	private String mString;
-	private Boolean mStart;
+	private String mString; // text if string
+	private Boolean mStart; // True if this string is a begining of the initial string
 
-	int index;
-	int posStart;
-	int posEnd;
+	int mIndex;    //index of the initial string
+	int mPosStart; //start position in the initial string
+	int mPosEnd;   //end position in the initial string
 
-	float addToBlank;
+	float mAddToBlank; // Count of pixels to add to every bkank symbol in the string to fit page
 
 	public StringToDisply(String string, Boolean start, int index, int posStart,
 			int posEnd, float addToBlank) {
 		super();
 		mString = string;
 		mStart = start;
-		this.index = index;
-		this.posStart = posStart;
-		this.posEnd = posEnd;
-		this.addToBlank = Math.max(0, addToBlank);
+		mIndex = index;
+		mPosStart = posStart;
+		mPosEnd = posEnd;
+		mAddToBlank = Math.max(0, addToBlank);
 	}
 
 	public boolean isStart() {
-		// TODO: Implement this method
 		return mStart;
 	}
 
@@ -35,6 +38,6 @@ public class StringToDisply {
 	}
 
 	public float getAddToBlank() {
-		return addToBlank;
+		return mAddToBlank;
 	}
 }
