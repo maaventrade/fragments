@@ -27,18 +27,15 @@ import com.alexmochalov.settings.DialogModeGroup;
 import com.alexmochalov.settings.SettingsActivity;
 import com.alexmohalov.animation.*;
 
-
+/**
+ * App intended to train the tracking of the eyes movement (the Eye Accessing Cues)
+ */
 public class MainActivity extends Activity  { //implements OnSharedPreferenceChangeListener
 	Context mContext;
-	// The path to save and load images 
-	String initPath = Params.APP_FOLDER;
-	// Name of the current image (*.png)
-	String mFileName = "new_subtitles";
-	// Image file extention
-	static final String FILE_EXT[] = {".srt"};
+	String initPath = Params.APP_FOLDER; // The path to save marks files	
+	String mFileName = "new_subtitles"; // Name of the current mark file (*.srt)
+	static final String FILE_EXT[] = {".srt"}; // Image file extention
 	
-
-//Menu menu;
 	String info = "";
 	
 	SurfaceViewScreenButtons surface;
