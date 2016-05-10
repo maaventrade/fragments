@@ -1,7 +1,9 @@
 package com.alexmohalov.animation;
 
 import android.graphics.*;
-
+/*
+*
+*/
 public abstract class Element{
 	protected float x; 
 	protected float y;
